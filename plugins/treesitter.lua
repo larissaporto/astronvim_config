@@ -6,7 +6,8 @@ return {
       "lua",
       "luap",
       "ruby",
-      "graphql"
+      "graphql",
+      "java"
     })
   end,
 }
