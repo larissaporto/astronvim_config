@@ -73,6 +73,11 @@ return {
       vim.g.neovide_remember_window_size = true
     end
 
+    vim.api.nvim_create_autocmd ('BufWritePre',{
+      pattern = "*", -- run on all filetypes
+      command = [[%s/\s\+$//e]], -- remove trailing whitespace
+      desc = "remove trailing whitespace",
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
